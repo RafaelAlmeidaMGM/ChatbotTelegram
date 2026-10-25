@@ -1,0 +1,17 @@
+name = "chatbot-atendimento"
+main = "src/index.ts"
+compatibility_date = "2026-10-25"
+workers_dev = true
+
+[vars]
+COMPANY_NAME = "Atendimento"
+# Configure os IDs negativos dos grupos antes de receber clientes.
+# SUPORTE_CHAT_ID = "-100..."
+# FINANCEIRO_CHAT_ID = "-100..."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "chatbot-atendimento"
+# Substitua pelo database_id retornado por: npx wrangler d1 create chatbot-atendimento
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"

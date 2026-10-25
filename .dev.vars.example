@@ -1,0 +1,5 @@
+# Copie para .dev.vars para desenvolvimento. Nunca publique chaves.
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_WEBHOOK_SECRET=
+SUPORTE_CHAT_ID=
+FINANCEIRO_CHAT_ID=

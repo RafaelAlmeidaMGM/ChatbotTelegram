@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261025.1",
+    "esbuild": "0.28.2",
+    "miniflare": "5.20261019.2-beta",
+    "typescript": "7.0.2",
+    "wrangler": "4.152.0"
+  },
+  "name": "chatbot-telegram-workers",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "check": "tsc --noEmit",
+    "build": "esbuild src/index.ts --bundle --format=esm --platform=browser --outfile=dist/worker.js",
+    "test": "npm run build && node --test tests-worker/*.test.mjs",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply DB --local",
+    "db:remote": "wrangler d1 migrations apply DB --remote",
+    "telegram:webhook": "node --env-file-if-exists=.dev.vars scripts/telegram.mjs register",
+    "telegram:check": "node --env-file-if-exists=.dev.vars scripts/telegram.mjs check"
+  }
+}

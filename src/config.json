@@ -1,0 +1,43 @@
+{
+  "texts": {
+    "menuPrompt": "Digite o número da opção desejada ou toque em um botão:",
+    "welcome": "Olá! Bem-vindo ao atendimento de {company}.",
+    "privacy": "Não envie senhas, cartões ou códigos de acesso. Use /menu ou /cancelar para voltar.",
+    "submenuPrompt": "Você escolheu {sector}. Como podemos ajudar?",
+    "afterAnswer": "Se ainda precisar de ajuda, escolha Falar com atendente. Você também pode consultar outro assunto.",
+    "back": "0 - Voltar ao menu",
+    "askName": "Vou registrar seu chamado para {sector}. Qual é o seu nome?",
+    "askCompany": "Qual é o nome da sua empresa? Se não se aplica, envie um hífen (-).",
+    "askDescription": "Descreva o que precisa em uma mensagem de texto (até 2500 caracteres).",
+    "delivered": "Sua solicitação foi encaminhada à equipe. As respostas chegarão nesta conversa.",
+    "pending": "Solicitação salva, mas o envio à equipe está indisponível. Tente /reenviar {protocol}.",
+    "newRequest": "Use /menu para outro atendimento."
+  },
+  "departments": [
+    {
+      "key": "suporte",
+      "number": 1,
+      "label": "Suporte",
+      "emoji": "⚙️",
+      "chatIdVariable": "SUPORTE_CHAT_ID",
+      "options": [
+        { "number": 1, "label": "Não consigo acessar o sistema", "action": "answer", "answer": "Confira se está utilizando o usuário correto e se há conexão com a internet. Se aparecer uma mensagem de erro, anote o texto para informar ao suporte. Não envie sua senha nem códigos de acesso." },
+        { "number": 2, "label": "Problema no PDV", "action": "answer", "answer": "Informe em qual etapa do PDV o problema acontece, o horário e a mensagem exibida. Se a situação envolver uma cobrança, confira o resultado da operação antes de tentar novamente, para evitar duplicidade. A equipe analisará o caso quando você abrir um chamado." },
+        { "number": 3, "label": "Problema com impressão", "action": "answer", "answer": "Confira se a impressora está ligada, conectada e com papel. Anote o modelo e a mensagem de erro. Se continuar sem imprimir, escolha Falar com atendente para registrar o caso. Evite repetir uma operação de venda apenas para testar a impressão." },
+        { "number": 4, "label": "Dúvidas sobre cadastros", "action": "answer", "answer": "Informe qual cadastro deseja consultar ou alterar e em qual tela está a dúvida. Não exclua registros para tentar corrigir o problema. Escolha Falar com atendente para receber uma orientação específica sobre seu sistema." },
+        { "number": 5, "label": "Falar com atendente", "action": "handoff" }
+      ]
+    },
+    {
+      "key": "financeiro",
+      "number": 2,
+      "label": "Financeiro",
+      "emoji": "💰",
+      "chatIdVariable": "FINANCEIRO_CHAT_ID",
+      "options": [
+        { "number": 1, "label": "Dúvidas", "action": "answer", "answer": "Para esclarecer uma dúvida financeira, informe sua empresa e descreva o assunto ao abrir um chamado. Não envie senhas, dados completos de cartão ou códigos bancários. Se precisar de uma análise da equipe, escolha Falar com atendente." },
+        { "number": 2, "label": "Falar com atendente", "action": "handoff" }
+      ]
+    }
+  ]
+}
