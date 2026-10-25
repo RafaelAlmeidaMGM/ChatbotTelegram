@@ -4,6 +4,10 @@
 executar os comandos e distingue o teste direto com Telegram da integração com
 uma ferramenta de atendimento.
 
+Para o MGM Helpdesk local com Telegram bloqueado por HTTPS, consulte
+[PUBLIC_URL e túnel local](HELPDESK_LOCAL_HTTPS.md). O helper dessa página deve ser
+executado na pasta do **Helpdesk**, não na pasta do Worker.
+
 Se você usa uma ferramenta conectada ao Telegram, identifique sua API antes de
 registrar este Worker como webhook. O Telegram mantém um único webhook por bot;
 substituí-lo pode desconectar a ferramenta. O código atual encaminha para grupos
